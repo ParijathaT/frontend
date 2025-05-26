@@ -45,7 +45,7 @@ pipeline {
                 expression { params.deploy }
             }
             steps{
-                build job: 'frontend-deploy', parameters: [string(name: 'version', value: "${appVersion}")], wait: true
+                build job: 'frontend-deploy', parameters: [string(name: 'version', value: "${appVersion}")], wait: false
             }
         }
     }
